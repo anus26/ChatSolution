@@ -17,7 +17,7 @@ export default {
       lightBrown: "#645550",
       darkBrown: "#2c2523",
       black: "#1e1917",
-      white: "#f1e1d9",
+      white: "white",
       cyan: "#15d1e9",
       lightCyan: "#88e5f0",
       darkCyan: "#009fb3",
