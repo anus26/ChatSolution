@@ -1,26 +1,56 @@
+import axios from 'axios';
 import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 import { BsEye } from 'react-icons/bs';
 import { IoMdEyeOff } from 'react-icons/io';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../Components/Authprovider';
 
 const Login = () => {
     // Correct way to destructure useState: [stateVariable, setStateFunction]
     const [email, setEmail] = useState(''); // Initialize with an empty string
     const [password, setPassword] = useState(''); // Initialize with an empty string
     const [lineeye, setLineEye]=useState(false)
+    const [authUser,setAuthUser]=useAuth()
+  const navigate=useNavigate()
 
     const hanldeeye=()=>{
-      setLineEye()
+      setLineEye(prev => !prev)
     }
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault(); // Prevents the default form submission behavior (page reload)
+       await axios.post(
+        'http://localhost:5000/api/v1/login',
+        {
+           email,
+           password 
+        },
+        {
+            withCredentials:true
+        }
+    )
+       .then((response)=>{
+            console.log(response.data);
+            if (response.data) {
+                  toast.success("successfully login")
 
-        console.log('Email:', email);
-        console.log('Password:', password);
+            }
+            localStorage.setItem("ChatAI",JSON.stringify(response.data))
+            setAuthUser(response.data)
+            navigate('/')
+            
+        })
+        .catch((error)=>{
+            if (error.response) {
+                toast.error("Error:"+error.response.data.error)
+                
+            }
+        })
+       
+       
 
-        // In a real application, you would send this data to your backend here
-        // e.g., axios.post('/api/login', { email, password });
+
     };
 
     return (
