@@ -19,7 +19,7 @@ const Logout = () => {
   }
   return (
 <>
-<button className='m-5'> <BiLogOutCircle  onClick={handlelogout}/></button>
+<button className='m-3 hover:text-darkCyan font-special text-xl'> <BiLogOutCircle  onClick={handlelogout}/></button>
 </>
 )
 }

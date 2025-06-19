@@ -24,8 +24,11 @@ export default {
       orange: "#fb9718",
       lightOrange: "#fac27b",
       darkOrange: "#d28422",
-      grey: "#626965",
+      grey: "#626040",
       lightGrey: "#978580",
+      cyan:"cyan",
+      lightgray: '#E0E0E0',
+    light:'#F3F4F6',
       darkGrey: "#3f4441",},
     extend: {
       boxShadow:{

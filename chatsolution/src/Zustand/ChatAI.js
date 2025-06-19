@@ -14,6 +14,12 @@ const ChatAI = create((set) => ({
       questionList: [...state.questionList, newQuestion], // purane + naya question add hoga
     })),
 
+    //sara message list replace karne ka lie [API]
+    setQuestion:(messageArray)=>
+        set(()=>({
+questionList:messageArray
+        })),
+
   // Purani chat clear karne ka function
   clearQuestions: () => set({ questionList: [] }),
 }));
