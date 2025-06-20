@@ -15,7 +15,7 @@ const Secondpart = () => {
     e.preventDefault();
     console.log('chat:', chat);
 try {
-  const res=await axios.post('http://localhost:5000/api/v1/message',{question:chat},{
+  const res=await axios.post('https://chatsolution-backendd-production.up.railway.app/api/v1/message',{question:chat},{
     withCredentials:true
     
   })

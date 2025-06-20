@@ -14,7 +14,7 @@ const FirstPart = () => {
   useEffect(()=>{
 const fetchMessages=async()=>{
   try {
-    const response=await axios.get('http://localhost:5000/api/v1/allmessages',{
+    const response=await axios.get('https://chatsolution-backendd-production.up.railway.app/api/v1/allmessages',{
       withCredentials:true,
     })
     setQuestion(response.data.messages)

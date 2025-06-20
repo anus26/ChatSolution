@@ -5,7 +5,7 @@ import { BiLogOutCircle } from "react-icons/bi";
 const Logout = () => {
   const handlelogout=async()=>{
     try {
-      const response=await axios.post('http://localhost:5000/api/v1/logout')
+      const response=await axios.post('https://chatsolution-backendd-production.up.railway.app/api/v1/logout')
       localStorage.removeItem('ChatAI')
       console.log(response);
 
