@@ -8,7 +8,7 @@ import ChatAI from '../Zustand/ChatAI';
 
 const Secondpart = () => {
   const [chat, setChat] = useState('');
-  const {questionList, setQuestion}=ChatAI()
+  const {questionList, addQuestion}=ChatAI()
 
 
   const handleClick = async(e) => {
@@ -20,7 +20,7 @@ try {
     
   })
   const answer=res.data.answer
-setQuestion( prev =>[...prev,{question:chat,message:answer}])
+addQuestion( prev =>[...prev,{question:chat,message:answer}])
   setChat('');
 } catch (error) {
   

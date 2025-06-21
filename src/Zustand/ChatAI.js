@@ -9,7 +9,7 @@ const ChatAI = create((set) => ({
   setSelectedAI: (selectedAI) => set({ selectedAI }),
 
   // Chat mein naye sawal aur jawab ko list mein add karne ka function
-  setQuestion: (newQuestion) =>
+  addQuestion: (newQuestion) =>
     set((state) => ({
       questionList: [...state.questionList, newQuestion], // purane + naya question add hoga
     })),
@@ -17,7 +17,7 @@ const ChatAI = create((set) => ({
     //sara message list replace karne ka lie [API]
     setQuestion:(messageArray)=>
         set(()=>({
-questionList:messageArray
+questionList : Array.isArray(messageArray)?messageArray:[]
         })),
 
   // Purani chat clear karne ka function
