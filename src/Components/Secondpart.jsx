@@ -45,7 +45,7 @@ setQuestion( prev =>[...prev,{question:chat,message:answer}])
           ChatSolution</h1>
         <div className="min-h-screen flex flex-col items-center justify-center p-4">
              <div className="space-y-4">
-        {questionList.slice(-1).map((chat, index) => (
+        {Array.isArray(questionList) && questionList.slice(-1).map((chat, index) => (
           <div key={index} className="bg-gray-100 p-3 rounded">
             <p><strong>Q:</strong> {chat.question}</p>
             <p><strong>A:</strong> {chat.message}</p>
