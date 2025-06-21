@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { FaBars } from "react-icons/fa";
 import { HiLockClosed } from "react-icons/hi";
 import { BsFillUnlockFill } from "react-icons/bs";
-import Logout from '../pages/Logout';
 import axios from 'axios';
+import Logout from './Logout';
 import ChatAI from '../Zustand/ChatAI';
 
 const FirstPart = () => {

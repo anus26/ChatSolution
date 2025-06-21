@@ -1,6 +1,7 @@
 import React from 'react'
-import FIrstpart from '../Compents/FIrstpart'
-import Secondpart from '../Compents/Secondpart'
+import FirstPart from '../Components/Firstpart'
+import Secondpart from '../Components/Secondpart'
+
 
 const Home = () => {
   return (
@@ -9,7 +10,7 @@ const Home = () => {
 
  <section className='part-left w-1/4   '>
 
- <FIrstpart />
+ <FirstPart />
  </section>
  <section className='part-right w-3/4'>
     <Secondpart />

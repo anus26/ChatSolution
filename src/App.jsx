@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Singup from './pages/Singup';
+
 import { Toaster } from 'react-hot-toast';
 import { useAuth } from './Components/Authprovider';
+import Login from './Pages/Login';
+import Singup from './Pages/Singup';
+import Home from './Pages/Home';
 
 const App = () => {
   const [authUser, setAuthUser] = useAuth();
