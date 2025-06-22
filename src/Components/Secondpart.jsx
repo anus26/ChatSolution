@@ -20,10 +20,10 @@ try {
     
   })
   const answer=res.data.answer
-addQuestion( prev =>[...prev,{question:chat,message:answer}])
+addQuestion( {question:chat,message:answer})
   setChat('');
 } catch (error) {
-  
+    console.error("Error sending chat:", error);
 }
 
 
@@ -45,7 +45,7 @@ addQuestion( prev =>[...prev,{question:chat,message:answer}])
           ChatSolution</h1>
         <div className="min-h-screen flex flex-col items-center justify-center p-4">
              <div className="space-y-4">
-        {Array.isArray(questionList) && questionList.slice(-1).map((chat, index) => (
+        { questionList.map((chat, index) => (
           <div key={index} className="bg-gray-100 p-3 rounded">
             <p><strong>Q:</strong> {chat.question}</p>
             <p><strong>A:</strong> {chat.message}</p>
