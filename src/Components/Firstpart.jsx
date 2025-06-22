@@ -3,8 +3,8 @@ import { FaBars } from "react-icons/fa";
 import { HiLockClosed } from "react-icons/hi";
 import { BsFillUnlockFill } from "react-icons/bs";
 import axios from 'axios';
-import Logout from './Logout';
-import ChatAI from '../Zustand/ChatAI';
+import Logout from './Logout.jsx';
+import ChatAI from '../Zustand/ChatAI.js';
 
 const FirstPart = () => {
   const [locked, setLocked] = useState(false);

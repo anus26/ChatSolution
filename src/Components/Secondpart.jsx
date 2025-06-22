@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import axios from 'axios';
-import ChatAI from '../Zustand/ChatAI';
+import ChatAI from '../Zustand/ChatAI.js';
 
 // import { Link } from 'react-router-dom';
 
