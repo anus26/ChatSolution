@@ -45,12 +45,12 @@ addQuestion( {question:chat,message:answer})
           ChatSolution</h1>
         <div className="min-h-screen flex flex-col items-center justify-center p-4">
              <div className="space-y-4">
-        { questionList.map((chat, index) => (
+        { questionList.length > 0 &&(
           <div key={index} className="bg-gray-100 p-3 rounded">
-            <p><strong>Q:</strong> {chat.question}</p>
-            <p><strong>A:</strong> {chat.message}</p>
+            <p><strong>Q:</strong> {questionList[questionList.length-1].question}</p>
+            <p><strong>A:</strong> {questionList[questionList.length-1].message}</p>
           </div>
-           ))}
+)}
            </div>
           <form onSubmit={handleClick} className="w-full max-w-md">
             <Box sx={{ width: '100%' }}>
