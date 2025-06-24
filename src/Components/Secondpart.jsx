@@ -34,7 +34,7 @@ addQuestion( {question:chat,message:answer})
 
   return (
     <>
-      <section className="h-screen overflow-y-auto bg-white text-black">
+      <section className="h-screen  bg-white text-black overflow-hidden ">
         {/* <div className='flex items-end justify-end'>
 
        <button  className='rounded-md  mt-2  w-24 hover:bg-darkCyan text-black bg-light hover:text-black py-2 transition-all duration-300'><Link to='/login'>Login</Link></button>
