@@ -46,7 +46,7 @@ addQuestion( {question:chat,message:answer})
         <div className="min-h-screen flex flex-col items-center justify-center p-4">
              <div className="space-y-4">
         { questionList.length > 0 &&(
-          <div  className="bg-gray-100 p-3 rounded">
+          <div  className="bg-gray-100  p-3 rounded">
             <p><strong>Q:</strong> {questionList[questionList.length-1].question}</p>
             <p><strong>A:</strong> {questionList[questionList.length-1].message}</p>
           </div>
